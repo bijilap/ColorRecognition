@@ -5,10 +5,10 @@ def main():
     detector = ColorDetector()
     parser = argparse.ArgumentParser()
     # --k : number of clusters, --image: image path, --debug: debug level
-    parser.add_argument("--k", nargs=1)
-    parser.add_argument("--n", nargs=1)
-    parser.add_argument("--image", nargs=1)
-    parser.add_argument("--debug", nargs=1)
+    parser.add_argument("--k", nargs=1, type=int, help='maximum number of colors to be identified. Default:10')
+    parser.add_argument("--n", nargs=1, type=int, help='number of top dominant colors to be displayed')
+    parser.add_argument("--image", nargs=1, required=True, help='full path of image to be processed')
+    parser.add_argument("--debug", nargs=1, type=int, help='debug level: 1 for debug mode, 0: no log messages')
     args = parser.parse_args()
 
     img_name = None

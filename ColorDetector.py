@@ -13,9 +13,9 @@ class ColorDetector:
 
     NUM_OF_CLUSTERS = 10
 
-    log_level =0
+    log_level =  LOG_LEVEL_REGULAR
 
-    def log(self, msg, log_level = LOG_LEVEL_DEBUG):
+    def log(self, msg, log_level=LOG_LEVEL_DEBUG):
         if log_level == self.log_level:
             print msg
 
